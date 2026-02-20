@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — Webb Studio Architecture</title>
+  <meta name="description" content="Explore Webb Studio's case studies — award-winning residential, commercial and cultural architecture projects." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .portfolio-item { transition: opacity 0.4s, transform 0.4s var(--ease-out); }
+    .portfolio-item.hidden { opacity:0; transform:scale(0.95); pointer-events:none; position:absolute; }
+    .portfolio-grid { position:relative; }
+  </style>
+</head>
+<body>
+
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+  <div class="scroll-progress"></div>
+  <div class="page-transition"></div>
+
+  <!-- NAV -->
+  <nav class="nav scrolled" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="Webb Studio Home">
+        <span class="nav__logo-name">Webb Studio</span>
+        <span class="nav__logo-sub">Architecture</span>
+      </a>
+      <ul class="nav__links" role="list">
+        <li><a href="index.html"     class="nav__link">Home</a></li>
+        <li><a href="portfolio.html" class="nav__link active">Portfolio</a></li>
+        <li><a href="about.html"     class="nav__link">About</a></li>
+        <li><a href="contact.html"   class="nav__link">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="nav__cta">Start a project</a>
+      <button class="nav__burger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="nav__mobile" role="dialog" aria-label="Mobile navigation">
+    <ul class="nav__mobile-links" role="list">
+      <li><a href="index.html"     class="nav__mobile-link">Home</a></li>
+      <li><a href="portfolio.html" class="nav__mobile-link">Portfolio</a></li>
+      <li><a href="about.html"     class="nav__mobile-link">About</a></li>
+      <li><a href="contact.html"   class="nav__mobile-link">Contact</a></li>
+    </ul>
+    <div class="nav__mobile-footer">
+      <span>© 2024 Webb Studio</span>
+      <span>New York, NY</span>
+    </div>
+  </div>
+
+  <!-- PAGE HERO -->
+  <header class="page-hero section--alt" aria-labelledby="portfolio-title">
+    <div class="wrap">
+      <p class="page-hero__eyebrow" data-reveal="fade">Case Studies</p>
+      <h1 class="page-hero__title" id="portfolio-title" data-reveal="up">Selected<br /><em>Work</em></h1>
+      <p class="page-hero__sub" data-reveal="up" data-delay="0.15">
+        180+ projects across residential, commercial and cultural typologies — each one a unique response to site, brief and vision.
+      </p>
+    </div>
+  </header>
+
+  <!-- FILTER -->
+  <div class="portfolio-filter">
+    <div class="wrap">
+      <div class="filter-bar" role="group" aria-label="Filter projects by category">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="residential">Residential</button>
+        <button class="filter-btn" data-filter="commercial">Commercial</button>
+        <button class="filter-btn" data-filter="cultural">Cultural</button>
+        <button class="filter-btn" data-filter="interior">Interior</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- PORTFOLIO GRID -->
+  <main class="section" id="main-content">
+    <div class="wrap">
+      <div class="portfolio-grid" data-stagger>
+
+        <article class="portfolio-item" data-category="residential">
+          <a href="#" class="project-card" aria-label="Cascade Residence — Residential, Malibu 2023">
+            <div class="project-card__img img-wrap">
+              <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80"
+                   alt="Cascade Residence" loading="lazy" />
+              <div class="project-card__overlay">
+                <span class="project-card__hover-cta">
+                  View case study
+                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M8 3l5 5-5 5"/></svg>
+                </span>
+              </div>
+            </div>
+            <div class="project-card__info">
+              <p class="project-card__cat">Residential</p>
+              <h2 class="project-card__title">Cascade Residence</h2>
+              <p class="project-card__sub">Malibu, CA — 2023</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="portfolio-item" data-category="cultural">
+          <a href="#" class="project-card" aria-label="Meridian Cultural Center — Cultural, New York 2022">
+            <div class="project-card__img img-wrap">
+              <img src="https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=800&q=80"
+                   alt="Meridian Cultural Center" loading="lazy" />
+              <div class="project-card__overlay">
+                <span class="project-card__hover-cta">View case study
+                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M8 3l5 5-5 5"/></svg>
+                </span>
+              </div>
+            </div>
+            <div class="project-card__info">
+              <p class="project-card__cat">Cultural</p>
+              <h2 class="project-card__title">Meridian Cultural Center</h2>
+              <p class="project-card__sub">New York, NY — 2022</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="portfolio-item" data-category="commercial">
+          <a href="#" class="project-card" aria-label="Helix Tower — Commercial, Chicago 2022">
+            <div class="project-card__img img-wrap">
+              <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80"
+                   alt="Helix Tower" loading="lazy" />
+              <div class="project-card__overlay">
+                <span class="project-card__hover-cta">View case study
+                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M8 3l5 5-5 5"/></svg>
+                </span>
+              </div>
+            </div>
+            <div class="project-card__info">
+              <p class="project-card__cat">Commercial</p>
+              <h2 class="project-card__title">Helix Tower</h2>
+              <p class="project-card__sub">Chicago, IL — 2022</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="portfolio-item" data-category="residential">
+          <a href="#" class="project-card" aria-label="The Stone Pavilion — Residential, Santa Fe 2021">
+            <div class="project-card__img img-wrap">
+              <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80"
+                   alt="The Stone Pavilion" loading="lazy" />
+              <div class="project-card__overlay">
+                <span class="project-card__hover-cta">View case study
+                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M8 3l5 5-5 5"/></svg>
+                </span>
+              </div>
+            </div>
+            <div class="project-card__info">
+              <p class="project-card__cat">Residential</p>
+              <h2 class="project-card__title">The Stone Pavilion</h2>
+              <p class="project-card__sub">Santa Fe, NM — 2021</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="portfolio-item" data-category="interior">
+          <a href="#" class="project-card" aria-label="Ora Residence Interior — Interior, Greenwich 2021">
+            <div class="project-card__img img-wrap">
+              <img src="https://images.unsplash.com/photo-1501183638710-841dd1904471?w=800&q=80"
+                   alt="Ora Residence Interior" loading="lazy" />
+              <div class="project-card__overlay">
+                <span class="project-card__hover-cta">View case study
+                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M8 3l5 5-5 5"/></svg>
+                </span>
+              </div>
+            </div>
+            <div class="project-card__info">
+              <p class="project-card__cat">Interior</p>
+              <h2 class="project-card__title">Ora Residence</h2>
+              <p class="project-card__sub">Greenwich, CT — 2021</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="portfolio-item" data-category="commercial">
+          <a href="#" class="project-card" aria-label="Nova Business Park — Commercial, Austin 2020">
+            <div class="project-card__img img-wrap">
+              <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=80"
+                   alt="Nova Business Park" loading="lazy" />
+              <div class="project-card__overlay">
+                <span class="project-card__hover-cta">View case study
+                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M8 3l5 5-5 5"/></svg>
+                </span>
+              </div>
+            </div>
+            <div class="project-card__info">
+              <p class="project-card__cat">Commercial</p>
+              <h2 class="project-card__title">Nova Business Park</h2>
+              <p class="project-card__sub">Austin, TX — 2020</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="portfolio-item" data-category="cultural">
+          <a href="#" class="project-card" aria-label="Ember Pavilion — Cultural, London 2020">
+            <div class="project-card__img img-wrap">
+              <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&q=80"
+                   alt="Ember Pavilion" loading="lazy" />
+              <div class="project-card__overlay">
+                <span class="project-card__hover-cta">View case study
+                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M8 3l5 5-5 5"/></svg>
+                </span>
+              </div>
+            </div>
+            <div class="project-card__info">
+              <p class="project-card__cat">Cultural</p>
+              <h2 class="project-card__title">Ember Pavilion</h2>
+              <p class="project-card__sub">London, UK — 2020</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="portfolio-item" data-category="residential">
+          <a href="#" class="project-card" aria-label="Horizon House — Residential, Hamptons 2019">
+            <div class="project-card__img img-wrap">
+              <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80"
+                   alt="Horizon House" loading="lazy" />
+              <div class="project-card__overlay">
+                <span class="project-card__hover-cta">View case study
+                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M8 3l5 5-5 5"/></svg>
+                </span>
+              </div>
+            </div>
+            <div class="project-card__info">
+              <p class="project-card__cat">Residential</p>
+              <h2 class="project-card__title">Horizon House</h2>
+              <p class="project-card__sub">The Hamptons, NY — 2019</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="portfolio-item" data-category="interior">
+          <a href="#" class="project-card" aria-label="Vertex Penthouse — Interior, Manhattan 2019">
+            <div class="project-card__img img-wrap">
+              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80"
+                   alt="Vertex Penthouse" loading="lazy" />
+              <div class="project-card__overlay">
+                <span class="project-card__hover-cta">View case study
+                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M8 3l5 5-5 5"/></svg>
+                </span>
+              </div>
+            </div>
+            <div class="project-card__info">
+              <p class="project-card__cat">Interior</p>
+              <h2 class="project-card__title">Vertex Penthouse</h2>
+              <p class="project-card__sub">Manhattan, NY — 2019</p>
+            </div>
+          </a>
+        </article>
+
+      </div><!-- /portfolio-grid -->
+    </div>
+  </main>
+
+  <!-- CTA -->
+  <section class="cta-band section--alt" aria-label="Start a project">
+    <div class="wrap">
+      <div class="cta-band__big" data-reveal="up">
+        Have a project<br /><em>in mind?</em>
+        <a href="contact.html" class="btn btn--primary">
+          Let's talk
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M3 8h10M8 3l5 5-5 5"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="wrap">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <div class="footer__logo">Webb Studio</div>
+          <p class="footer__tagline">Architecture &amp; Design. New York · London · Tokyo. Est. 2000.</p>
+          <div class="footer__socials">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="footer__social" aria-label="Instagram">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="footer__social" aria-label="LinkedIn">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="https://behance.net" target="_blank" rel="noopener noreferrer" class="footer__social" aria-label="Behance">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M22 7h-7V5h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14H15.97c.13 3.211 3.483 3.312 4.588 2.029H23.726zm-7.686-4h4.965c-.105-1.547-1.136-2.219-2.477-2.219-1.466 0-2.277.768-2.488 2.219zm-9.574 6.988H0V5.021h6.953c5.476.081 5.58 5.444 2.72 6.906 3.461 1.26 3.577 8.061-3.207 8.061zM3 11h3.584c2.508 0 2.906-3-.312-3H3v3zm3.391 3H3v3.016h3.341c3.055 0 2.868-3.016.05-3.016z"/></svg>
+            </a>
+            <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" class="footer__social" aria-label="Pinterest">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <p class="footer__col-title">Navigation</p>
+          <ul class="footer__links">
+            <li><a href="index.html"     class="footer__link">Home</a></li>
+            <li><a href="portfolio.html" class="footer__link">Portfolio</a></li>
+            <li><a href="about.html"     class="footer__link">About</a></li>
+            <li><a href="contact.html"   class="footer__link">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__col-title">Services</p>
+          <ul class="footer__links">
+            <li><a href="about.html" class="footer__link">Architectural Design</a></li>
+            <li><a href="about.html" class="footer__link">Interior Design</a></li>
+            <li><a href="about.html" class="footer__link">Urban Planning</a></li>
+            <li><a href="about.html" class="footer__link">Sustainable Design</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__col-title">Contact</p>
+          <ul class="footer__links">
+            <li><a href="mailto:hello@webbstudio.com" class="footer__link">hello@webbstudio.com</a></li>
+            <li><a href="tel:+12125550147"            class="footer__link">+1 (212) 555-0147</a></li>
+            <li><span class="footer__link" style="cursor:default;">New York, NY 10001</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">© 2024 Webb Studio Architecture. All rights reserved.</p>
+        <nav class="footer__legal" aria-label="Legal">
+          <a href="terms.html">Terms &amp; Conditions</a>
+          <a href="privacy.html">Privacy Policy</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
