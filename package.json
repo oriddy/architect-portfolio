@@ -1,0 +1,9 @@
+{
+  "name": "architect-portfolio",
+  "version": "1.0.0",
+  "description": "Webb Studio — Architect portfolio website",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {}
+}
