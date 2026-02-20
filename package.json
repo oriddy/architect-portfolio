@@ -1,9 +1,21 @@
 {
   "name": "architect-portfolio",
   "version": "1.0.0",
-  "description": "Webb Studio — Architect portfolio website",
+  "description": "Webb Studio — Architect portfolio",
+  "type": "module",
   "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
     "start": "node server.js"
   },
-  "dependencies": {}
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.27.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.3",
+    "vite": "^5.4.10"
+  }
 }
